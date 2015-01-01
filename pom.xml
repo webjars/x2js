@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>x2js</artifactId>
-    <version>1.1.5-SNAPSHOT</version>
+    <version>1.1.5</version>
     <name>x2js</name>
     <description>WebJar for x2js</description>
     <url>http://webjars.org</url>
@@ -50,7 +50,7 @@
         <url>http://github.com/webjars/x2js</url>
         <connection>scm:git:https://github.com/webjars/x2js.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/x2js.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>x2js-1.1.5</tag>
     </scm>
     
     <build>
@@ -71,7 +71,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/x2js-v${upstream.version}"/>
+                                    <fileset dir="${project.build.directory}/x2js-v${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
