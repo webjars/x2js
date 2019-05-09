@@ -11,20 +11,20 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>x2js</artifactId>
-    <version>1.1.6-SNAPSHOT</version>
+    <version>3.2.3-SNAPSHOT</version>
     <name>x2js</name>
     <description>WebJar for x2js</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.1.5</upstream.version>
-        <upstream.url>https://x2js.googlecode.com/files/x2js-v${upstream.version}.zip</upstream.url>
+        <upstream.version>3.2.3</upstream.version>
+        <upstream.url>https://github.com/x2js/x2js/archive/v${upstream.version}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
                 "paths": {
-                    "x2js": "xml2json"
+                    "x2js": "x2js"
                 }
             }
         </requirejs>
@@ -71,7 +71,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/x2js-v${upstream.version}" />
+                                    <fileset dir="${project.build.directory}/x2js-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
@@ -82,13 +82,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.3</version>
             </plugin>
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.2</version>
+                <version>1.6.8</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
