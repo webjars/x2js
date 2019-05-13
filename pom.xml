@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>x2js</artifactId>
-    <version>3.2.3</version>
+    <version>3.2.4-SNAPSHOT</version>
     <name>x2js</name>
     <description>WebJar for x2js</description>
     <url>http://webjars.org</url>
@@ -50,7 +50,7 @@
         <url>http://github.com/webjars/x2js</url>
         <connection>scm:git:https://github.com/webjars/x2js.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/x2js.git</developerConnection>
-        <tag>x2js-3.2.3</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <build>
